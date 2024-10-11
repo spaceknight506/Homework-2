@@ -1,0 +1,19 @@
+% Thomas Carlton
+% Email: tcarltonbsa2006@gmail.com
+% Course: MATLAB Programming - Fall 2024
+% Assignment: Assignment 2
+% Task: 5
+% Date: 10/11/2024
+
+% Task: Stock Market Analysis
+file_name = 'stock_data.txt'
+
+%This allows us to calculate average, maximum and minimum contained in the
+%text file.
+data = read_from__file(file_name)
+average = mean(data)
+maximum = max(data)
+minimum = min(data)
+
+% Creates the Line Plot
+line_plot(data);
