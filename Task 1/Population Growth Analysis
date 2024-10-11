@@ -1,0 +1,22 @@
+% Thomas Carlton
+% Email: tcarltonbsa2006@gmail.com
+% Course: MATLAB Programming - Fall 2024
+% Assignment: Assignment 2
+% Task: 1
+% Date: 10/11/2024
+
+% Task: Population Growth Analysis
+
+% Setting up the vector population and the variable growth rate and
+% defining pop_data.
+population = [5000, 5200, 5350, 5600, 5800];
+growth_rate = (population(2:end) - population(1:end-1)) %./ population(1:end-1) 
+
+pop_data = [population; [0 growth_rate]]
+
+% Using fprintf and a for loop to display the population data and the growth rate in a
+% table format. 
+
+for i=1:length (population)
+    fprintf('For the %d year the population was %d with a growth rate %f \n' , i, pop_data(1,i), pop_data(2,i))
+end
