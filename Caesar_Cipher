@@ -1,0 +1,6 @@
+message = input('what would you like to encrypt: ','s');
+
+shift = input('Number of shifts: ');
+
+a_m = HW2T2(message, shift);
+fprintf("The encrypted message is %s " , a_m);

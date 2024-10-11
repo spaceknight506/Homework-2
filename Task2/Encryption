@@ -1,0 +1,26 @@
+% Thomas Carlton
+% Email: tcarltonbsa2006@gmail.com
+% Course: MATLAB Programming - Fall 2024
+% Assignment: Assignment 2
+% Task: 2
+% Date: 10/11/2024
+
+% Task: Simple Encryption Function
+
+%Creating a function that allows for the encryption of the message to be
+%carried out
+function encryption = HW2T2(message, shift)
+a_m = double(message);
+a_m = a_m + shift;
+
+a_m = a_m +2;
+for i = 1:length (a_m)
+    if a_m(i) > 122
+        a_m(i) = a_m(i) -25;
+    end
+    if a_m(i) < 97
+        a_m(i) = a_m(i) +25;
+    end
+end
+encryption = a_m
+end
